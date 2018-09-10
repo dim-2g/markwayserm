@@ -1,4 +1,5 @@
 $(function() {
+    printWidth();
     $('select.styled').selectric({
         maxHeight: 210
     });
@@ -169,6 +170,7 @@ initHowWorkSlider  = function() {
 
 
 $(window).resize(function(){
+    printWidth();
     var width = $(window).width();
     initPeopleSlider();
     initPhotoSlider();
@@ -222,3 +224,8 @@ showProducts = function(xpage, scroll) {
     });
     
 }
+
+printWidth = function() {
+    var topline_width = parseInt($('.topline').width()) + 2;
+    $('title').html($(window).width() + ' : ' + topline_width);
+};
