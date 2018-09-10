@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'FuturaFuturisCBold';
+    src: url('./FuturaFuturisC-Bold.eot');
+    src: url('./FuturaFuturisC-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./FuturaFuturisC-Bold.woff') format('woff'),
+    url('./FuturaFuturisC-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*  .box-name {font-family: 'Futura Futuris Bold';}  */
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('./Tahoma.eot');
+    src: url('./Tahoma.eot?#iefix') format('embedded-opentype'),
+    url('./Tahoma.woff') format('woff'),
+    url('./Tahoma.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*.box-name {font-family: 'Tahoma Regular';}*/
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('./Tahoma-Bold.eot');
+    src: url('./Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./Tahoma-Bold.woff') format('woff'),
+    url('./Tahoma-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* .box-name {font-family: 'Gotham Pro Regular';} */
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url('./GothamPro.eot');
+    src: url('./GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('./GothamPro.woff') format('woff'),
+    url('./GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
