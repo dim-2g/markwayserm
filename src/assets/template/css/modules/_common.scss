@@ -30,7 +30,9 @@ p{
 a{
   outline: none;
 }
-
+.bold{
+  font-weight: $font-weight-semibold;
+}
 .logo{
   margin-right: 33px;
   margin-top: 6px;
@@ -173,7 +175,7 @@ a{
   line-height: 42px;
   padding: 0px 30px;
   border-radius: 22px;
-  background: #f0f0f0;;
+  background: $gray;
   color: $blue;
   text-decoration: none;
   font-weight: bold;
@@ -188,7 +190,7 @@ a{
 }
 
 .promo{
-  border-bottom: 6px solid #f0f0f0;
+  border-bottom: 6px solid $gray;
   &__box{
     position: relative;
     padding-bottom: 48px;
@@ -205,7 +207,7 @@ a{
     &:before{
       display: inline-block;
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
       right: 495px;
       content: "";
       @include sprite($peak-up-gray);
@@ -334,4 +336,641 @@ a{
 }
 .digits{
   padding: 40px 0;
+}
+
+.block-caption{
+  font-size: 60px;
+  color: $orange;
+  text-transform: uppercase;
+  margin-bottom: 44px;
+}
+
+.opinion{
+  &__caption{
+
+  }
+  &__box{
+    position: relative;
+    &:before{
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 49%;
+      bottom: 0;
+      background-color: $gray;
+      z-index: 1;
+    }
+    &:after{
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: 51%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: $gradient;
+      z-index: 1;
+    }
+  }
+
+  &__row{
+    display: flex;
+  }
+  &__left{
+    position: relative;
+    padding: 30px 28px 30px 22px;
+    width: 51%;
+    z-index: 2;
+  }
+  &__right{
+    position: relative;
+    padding: 55px 25px 17px 58px;
+    width: 49%;
+    z-index: 2;
+    color: #fff;
+    &:after{
+      display: inline-block;
+      position: absolute;
+      bottom: -1px;
+      right: -80px;
+      content: "";
+      @include sprite($peak-up-gray);
+    }
+  }
+  &__headers{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__subject{
+    color: $blue;
+    font-size: 36px;
+    font-weight: $font-weight-semibold;
+    width: 100%;
+    line-height: 90%;
+  }
+  &__company-name{
+    font-style: italic;
+    font-size: 14px;
+    width: 100%;
+  }
+  .circles-text{
+    font-size: 37px;
+    font-weight: $font-weight-semibold;
+    color: $blue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    height: 128px;
+    line-height: 128px;
+  }
+  .circles-percent{
+    font-size: 24px;
+  }
+  &__charts{
+    display: flex;
+  }
+}
+.chart{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &__info{
+    padding: 0 18px;
+    font-size: 18px;
+    line-height: 100%;
+  }
+}
+
+.ya-market{
+  display: flex;
+  margin-bottom: 25px;
+  &__left{
+    //width: 457px;
+    //flex-shrink: 0;
+    padding-right: 57px;
+    position: relative;
+    width: 100%;
+    &:after{
+      content: "";
+      display: inline-block;
+      @include sprite($bracket);
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+  }
+  &__sad{
+    padding-left: 80px;
+    text-align: center;
+    position: relative;
+    margin-top: 7px;
+    margin-bottom: 37px;
+    max-width: 300px;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($smile-sad);
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+  }
+  &__positive{
+    padding-left: 80px;
+    text-align: center;
+    position: relative;
+    max-width: 300px;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($smile);
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+  }
+  &__digit{
+    font-size: 60px;
+    font-weight: $font-weight-regular;
+    line-height: 100%;
+    position: relative;
+  }
+  &__label{
+    font-size: 18px;
+    font-weight: $font-weight-medium;
+    line-height: 100%;
+    transform: translateY(-4px);
+  }
+  &__summary{
+    width: 260px;
+    flex-shrink: 0;
+    padding-top: 125px;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    font-weight: $font-weight-regular;
+    line-height: 100%;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($computer);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__summary-value{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 55px;
+    font-weight: $font-weight-regular;
+  }
+  &__note{
+    font-style: italic;
+  }
+}
+.footer{
+  height: 200px;
+}
+
+.opinion-bottom{
+  &__box{
+    position: relative;
+    &:before{
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 49%;
+      bottom: 0;
+      background-color: $blue;
+      z-index: 1;
+    }
+    &:after{
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: 51%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $gray;
+      z-index: 1;
+    }
+  }
+  &__row{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &__peoples{
+    width: 22.5%;
+    flex-shrink: 0;
+    margin-left: 15px;
+  }
+  &__requests{
+    width: 35.5%;
+    flex-shrink: 0;
+    background-color: $light-blue;
+  }
+  &__countries{
+    width: 42%;
+    flex-shrink: 0;
+    padding: 35px 0px 30px 50px;
+  }
+
+  &__headers{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+  }
+  &__subject{
+    color: $blue;
+    font-size: 36px;
+    font-weight: $font-weight-semibold;
+    width: 100%;
+    line-height: 85%;
+  }
+  &__company-name{
+    font-style: italic;
+    font-size: 14px;
+    min-width: 227px;
+    margin-bottom: 10px;
+  }
+  .circles-text{
+    font-size: 37px;
+    font-weight: $font-weight-semibold;
+    color: $blue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    height: 128px;
+    line-height: 128px;
+  }
+  .circles-percent{
+    font-size: 24px;
+  }
+  &__charts{
+    display: flex;
+  }
+}
+.peoples{
+  padding: 70px 30px 30px 30px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 313px;
+  &:before{
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    left: -195px;
+    content: "";
+    @include sprite($peak-up-white);
+  }
+  &__header{
+    padding-left: 150px;
+    position: relative;
+    margin-bottom: 10px;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($people);
+      position: absolute;
+      top: -11px;
+      left: 0;
+    }
+  }
+  &__digit{
+    font-size: 50px;
+    font-weight: $font-weight-semibold;
+    line-height: 100%;
+  }
+  &__label{
+    font-size: 37px;
+    font-weight: $font-weight-semibold;
+    line-height: 100%;
+    transform: translateY(-3px);
+  }
+  &__text{
+    font-size: 18px;
+    font-weight: $font-weight-medium;
+    line-height: 100%;
+    margin-bottom: auto;
+  }
+  &__note{
+    font-style: italic;
+    line-height: 100%;
+  }
+}
+
+.requests {
+  padding: 70px 30px 30px 44px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 313px;
+  &:before{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: -8px;
+    content: "";
+    @include sprite($peak-down-blue);
+  }
+  &:after{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 83px;
+    content: "";
+    @include sprite($peak-down-white-small);
+    transform: rotate(180deg) translateY(-1px);
+  }
+  &__header{
+    padding-left: 138px;
+    position: relative;
+    margin-bottom: 18px;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($loupe);
+      position: absolute;
+      top: -11px;
+      left: 12px;
+    }
+  }
+  &__digit{
+    font-size: 50px;
+    font-weight: $font-weight-semibold;
+    line-height: 100%;
+  }
+  &__label{
+    font-size: 30px;
+    font-weight: $font-weight-semibold;
+    line-height: 100%;
+  }
+  &__text{
+    font-size: 18px;
+    font-weight: $font-weight-medium;
+    line-height: 100%;
+    margin-bottom: auto;
+  }
+  &__note{
+    font-style: italic;
+    line-height: 100%;
+  }
+  &__unit{
+    font-size: 30px;
+    line-height: 100%;
+  }
+}
+
+
+.why{
+  &__box{
+    padding: 40px 0;
+    min-height: 500px;
+  }
+}
+
+.serm{
+
+  &__caption{
+    margin-bottom: 25px;
+  }
+  &__wrapper{
+    background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
+  }
+  &__box{
+    min-height: 670px;
+    position: relative;
+  }
+  &__header{
+    font-weight: $font-weight-semibold;
+    font-size: 36px;
+    color: $blue;
+    line-height: 90%;
+    margin-bottom: 6px;
+  }
+  &__info{
+    font-size: 18px;
+    line-height: 120%;
+  }
+  &__item{
+    position: absolute;
+    &--seo{
+      max-width: 190px;
+      top: 199px;
+      left: 0px;
+    }
+    &--monitoring{
+      max-width: 250px;
+      top: 379px;
+      left: 191px;
+    }
+    &--orm{
+      max-width: 275px;
+      top: 172px;
+      left: 353px;
+    }
+    &--serm{
+      max-width: 270px;
+      top: 437px;
+      left: 606px;
+    }
+    &--pr{
+      max-width: 250px;
+      top: 290px;
+      left: 769px;
+    }
+    &--smm{
+      max-width: 250px;
+      top: 152px;
+      left: 969px;
+    }
+    &--jur{
+      max-width: 300px;
+      top: 301px;
+      left: 1202px;
+
+    }
+  }
+  &__flower{
+    position: absolute;
+    bottom: -100px;
+    right: 356px;
+  }
+}
+
+
+.issues{
+  padding: 80px 0;
+}
+
+
+.advantages{
+  padding: 40px 0;
+  &__caption{
+    margin-bottom: 15px;
+  }
+  &__hr{
+    height: 6px;
+    background-color: $gray;
+    position: relative;
+  }
+  &__hr-box{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      display: inline-block;
+      right: 645px;
+      top: 100%;
+      @include sprite($peak-up-gray);
+      transform: rotate(180deg) translateY(-5px);
+    }
+    &:after{
+      position: absolute;
+      content: "";
+      display: inline-block;
+      right: 281px;
+      bottom: 100%;
+      @include sprite($peak-up-gray-small);
+    }
+  }
+
+  &__list{
+    margin-top: 73px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__card{
+    max-width: 300px;
+  }
+  &__image{
+    text-align: center;
+    height: 185px;
+    img{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  &__name{
+    font-size: 30px;
+    font-weight: $font-weight-semibold;
+    color: $blue;
+    text-align: center;
+    line-height: 100%;
+    margin-bottom: 13px;
+  }
+  &__info{
+    font-size: 18px;
+    font-weight: $font-weight-regular;
+    text-align: center;
+  }
+}
+
+.packets{
+  padding: 40px 0;
+  &__caption{
+    font-size: 59px;
+  }
+  &__box{
+    background-color: $gray;
+    padding: 85px 0 150px;
+  }
+  &__tab-inside{
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 100px;
+    &:after{
+      content: "";
+      display: inline-block;
+      @include sprite($peak-up-white);
+      transform: rotate(180deg) translate(50%, 1px);
+      top: 100%;
+      left: 50%;
+      position: absolute;
+    }
+  }
+  &__list{
+    display: table;
+    width: 100%;
+  }
+  &__row{
+    display: table-row;
+    > div{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    + .packets__row{
+      .packets__info{
+        border-top: 4px $gray solid;
+      }
+      .packets__value{
+        border-top: 4px $gray solid;
+      }
+    }
+  }
+  &__info{
+    padding: 50px 40px;
+    border-right: 4px $gray solid;
+    font-size: 18px;
+    .bold{
+      font-size: 20px;
+    }
+  }
+  &__value{
+    width: 450px;
+    font-size: 30px;
+    text-align: center;
+  }
+  &__name{
+    color: $orange;
+    font-size: 30px;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      position: relative;
+      &:before{
+        display: inline-block;
+        content: '';
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #000;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    }
+  }
+  &__more-box{
+    text-align: center;
+  }
+  &__more{
+    font-size: 36px;
+    text-decoration: underline;
+    color: #000;
+  }
 }
