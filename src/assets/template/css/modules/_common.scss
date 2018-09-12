@@ -335,7 +335,30 @@ a{
   color: #ffda70;
 }
 .digits{
-  padding: 40px 0;
+  padding: 36px 0 86px;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__value{
+    font-size: 72px;
+    color: $blue;
+    padding-right: 8px;
+  }
+  &__text{
+    padding-left: 10px;
+    font-size: 18px;
+    color: $blue;
+    font-weight: $font-weight-medium;
+  }
 }
 
 .block-caption{
@@ -346,6 +369,7 @@ a{
 }
 
 .opinion{
+  margin-bottom: 50px;
   &__caption{
 
   }
@@ -743,10 +767,60 @@ a{
 }
 
 
-.why{
-  &__box{
-    padding: 40px 0;
-    min-height: 500px;
+.why {
+  &__box {
+    display: flex;
+    padding: 44px 0;
+    min-height: 650px;
+    margin-bottom: 32px;
+  }
+  &__image{
+    position: relative;
+    width: 1000px;
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: 30px;
+      left: -27px;
+      content: "";
+      background: transparent url('/assets/template/images/1920/why__picture.png') center center;
+      width: 612px;
+      height: 547px;
+    }
+  }
+  &__info{
+    padding: 0 25px 0 35px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+
+  }
+  &__number{
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: $gradient;
+    display: block;
+    position: relative;
+  }
+  &__text{
+    font-size: 18px;
+    color: #000;
+    padding-left: 36px;
+  }
+  &__button{
+    text-align: center;
+    margin-bottom: 100px;
+    padding-right: 65px;
+    a{
+      height: 70px;
+      line-height: 74px;
+      padding: 0px 86px;
+      border-radius: 36px;
+      font-size: 18px;
+    }
+
   }
 }
 
