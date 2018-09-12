@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MoolBoran';
+  src: url('MoolBoran.eot');
+  src: url('MoolBoran.woff2') format('woff2'),
+       url('MoolBoran.woff') format('woff'),
+       url('MoolBoran.ttf') format('truetype'),
+       url('MoolBoran.svg#MoolBoran') format('svg'),
+       url('MoolBoran.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
     <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
 
 </head>
@@ -261,58 +262,26 @@
 <div class="why">
     <div class="container">
         <div class="why__box">
-            <div class="why__image">
-
-            </div>
-            <div class="why__info">
-                <div class="why__caption block-caption">Почему не стоит
-                    игнорировать отзывы?</div>
-                <div class="why__item">
-                    <div class="why__number">
-                        1
+            <div class="why__row">
+                <img src="/assets/template/images/1920/why__picture.png" alt="" class="why__image">
+                <div class="why__info">
+                    <div class="why__caption block-caption">
+                        Почему не стоит игнорировать отзывы?
                     </div>
-                    <div class="why__text">
-                        Вы теряете минимум 70% клиентов – тех самых людей, которые делают выбор, основываясь на отзывах
-                    </div>
-                </div>
-                <div class="why__item">
-                    <div class="why__number">
-                        2
-                    </div>
-                    <div class="why__text">
-                        Ваши вложения в SEO, рекламу, контекст и другие методы продвижения тратятся впустую
-                    </div>
-                </div>
-                <div class="why__item">
-                    <div class="why__number">
-                        3
-                    </div>
-                    <div class="why__text">
-                        Вам перестают доверять. А где нет доверия – там нет прибыли
-                    </div>
-                </div>
-                <div class="why__item">
-                    <div class="why__number">
-                        4
-                    </div>
-                    <div class="why__text">
-                        Вы позволяете конкурентам разрушать Вашу репутацию (не секрет, что часто негативные отзывы оставляют именно конкуренты)
-                    </div>
-                </div>
-                <div class="why__item">
-                    <div class="why__number">
-                        5
-                    </div>
-                    <div class="why__text">
-                        Вы теряете шансы на развитие компании и укрепление позиций на рынке
-                    </div>
+                    <ol class="numeric">
+                        <li>Вы теряете минимум 70% клиентов – тех самых людей, которые делают выбор, основываясь на отзывах</li>
+                        <li>Ваши вложения в SEO, рекламу, контекст и другие методы продвижения тратятся впустую</li>
+                        <li>Вам перестают доверять. А где нет доверия – там нет прибыли</li>
+                        <li>Вы позволяете конкурентам разрушать Вашу репутацию (не секрет, что часто негативные отзывы оставляют именно конкуренты)</li>
+                        <li>Вы теряете шансы на развитие компании и укрепление позиций на рынке</li>
+                    </ol>
                 </div>
             </div>
+            <div class="why__button">
+                <a class="btn-orange" href="#">Заказать управление репутацией</a>
+            </div>
+        </div>
 
-        </div>
-        <div class="why__button">
-            <a class="btn-orange" href="#">Заказать управление репутацией</a>
-        </div>
     </div>
 </div>
 
@@ -480,65 +449,287 @@
     </div>
     <div class="packets__box">
         <div class="container">
-            <div class="packets__tab-content">
-                <div class="packets__tab-inside">
-                    <div class="packets__list">
+            <div class="packets__nav">
+                <ul>
+                    <li>
+                        <a data-tab=".xtab-first" class="active" href="#">
+                            <span class="packets__base-name">Базовый</span>
+                            <span class="packets__cost">От <span class="packets__cost-value">31 524</span> руб/мес</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-tab=".xtab-second" href="#">
+                            <span class="packets__base-name">Оптимальный</span>
+                            <span class="packets__cost">От <span class="packets__cost-value">50 785</span> руб/мес</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-tab=".xtab-third" href="#">
+                            <span class="packets__base-name">Высокоэффективный</span>
+                            <span class="packets__cost">От <span class="packets__cost-value">50 785</span> руб/мес</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="btn-orange packets__compare">Сравнить все тарифы</a>
+            </div>
+            <div class="packets__tabs">
 
-                        <div class="packets__row">
-                            <div class="packets__info">
-                                <div class="packets__name">Мониторинг и отчетность</div>
-                                <p class="bold">Подбор наиболее высокочастотных запросов репутационной выдачи Заказчика:</p>
-                                <ul>
-                                    <li>По названию (Все варианты написания названия Компании Заказчика (бренда, продукта) в кавычках и без кавычек, англоязычное написание, с опечатками, url сайта);</li>
-                                    <li>По отзывам Компании (Все варианты написания Компании Заказчика + отзывы);</li>
-                                    <li>По отзывам сотрудников о Компании (Все варианты написания Компании Заказчика +отзывы сотрудников работников)+вакансии+работа+кто работал).</p></li>
-                                </ul>
-                            </div>
-                            <div class="packets__value">
-                                5 запросов
-                            </div>
-                        </div>
+                <div class="packets__tab-content xtab active xtab-first">
+                    <div class="packets__tab-inside">
+                        <div class="packets__list">
 
-                        <div class="packets__row">
-                            <div class="packets__info">
-                                <p class="bold">Постоянный мониторинг запросов выдачи Заказчика в «Яндекс» и «Google».</p>
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <div class="packets__name">Мониторинг и отчетность</div>
+                                    <p class="bold">Подбор наиболее высокочастотных запросов репутационной выдачи Заказчика:</p>
+                                    <ul>
+                                        <li>По названию (Все варианты написания названия Компании Заказчика (бренда, продукта) в кавычках и без кавычек, англоязычное написание, с опечатками, url сайта);</li>
+                                        <li>По отзывам Компании (Все варианты написания Компании Заказчика + отзывы);</li>
+                                        <li>По отзывам сотрудников о Компании (Все варианты написания Компании Заказчика +отзывы сотрудников работников)+вакансии+работа+кто работал).</p></li>
+                                    </ul>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов
+                                </div>
                             </div>
-                            <div class="packets__value">
-                                5 запросов,<br />
-                                топ-10
-                            </div>
-                        </div>
 
-                        <div class="packets__row">
-                            <div class="packets__info">
-                                <p class="bold">Подготовка и предоставление Заказчику отчета с оценкой состояния репутационной выдачи Заказчика в «Яндекс» и «Google».</p>
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Постоянный мониторинг запросов выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов,<br />
+                                    топ-10
+                                </div>
                             </div>
-                            <div class="packets__value">
-                                Ежемесячно
-                            </div>
-                        </div>
 
-                        <div class="packets__row">
-                            <div class="packets__info">
-                                <p class="bold">Выявление проблемных зон в деятельности Заказчика на основе информации из негативных отзывов и предоставление Заказчику рекомендаций по предотвращению повторения волны негатива.</p>
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Подготовка и предоставление Заказчику отчета с оценкой состояния репутационной выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    Ежемесячно
+                                </div>
                             </div>
-                            <div class="packets__value">
-                                &mdash;
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Выявление проблемных зон в деятельности Заказчика на основе информации из негативных отзывов и предоставление Заказчику рекомендаций по предотвращению повторения волны негатива.</p>
+                                </div>
+                                <div class="packets__value">
+                                    &mdash;
+                                </div>
                             </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    1233
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка 2 для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    &mdash;
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка 3 для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    534534
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
+                    <div class="packets__more-box">
+                        <a href="#" class="packets__more" data-rows=".xtab-first .packets__row" data-count="4">Далее</a>
+                    </div>
+                </div>
 
+                <div class="packets__tab-content xtab xtab-second">
+                    <div class="packets__tab-inside">
+                        <div class="packets__list">
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <div class="packets__name">Мониторинг и отчетность на второй вкладке</div>
+                                    <p class="bold">Подбор наиболее высокочастотных запросов репутационной выдачи Заказчика:</p>
+                                    <ul>
+                                        <li>По названию (Все варианты написания названия Компании Заказчика (бренда, продукта) в кавычках и без кавычек, англоязычное написание, с опечатками, url сайта);</li>
+                                        <li>По отзывам Компании (Все варианты написания Компании Заказчика + отзывы);</li>
+                                        <li>По отзывам сотрудников о Компании (Все варианты написания Компании Заказчика +отзывы сотрудников работников)+вакансии+работа+кто работал).</p></li>
+                                    </ul>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Постоянный мониторинг запросов выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов,<br />
+                                    топ-10
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Подготовка и предоставление Заказчику отчета с оценкой состояния репутационной выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    Ежемесячно
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Выявление проблемных зон в деятельности Заказчика на основе информации из негативных отзывов и предоставление Заказчику рекомендаций по предотвращению повторения волны негатива.</p>
+                                </div>
+                                <div class="packets__value">
+                                    &mdash;
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    123
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка 2 для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    &mdash;
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Скрытая строка 3 для примера</p>
+                                </div>
+                                <div class="packets__value">
+                                    456
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="packets__more-box">
+                        <a href="#" class="packets__more" data-rows=".xtab-second .packets__row" data-count="2">Далее</a>
+                    </div>
                 </div>
-                <div class="packets__more-box">
-                    <a href="#" class="packets__more">Далее</a>
+
+
+                <div class="packets__tab-content xtab xtab-third">
+                    <div class="packets__tab-inside">
+                        <div class="packets__list">
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Подбор наиболее высокочастотных запросов репутационной выдачи Заказчика:</p>
+                                    <ul>
+                                        <li>По названию (Все варианты написания названия Компании Заказчика (бренда, продукта) в кавычках и без кавычек, англоязычное написание, с опечатками, url сайта);</li>
+                                        <li>По отзывам Компании (Все варианты написания Компании Заказчика + отзывы);</li>
+                                        <li>По отзывам сотрудников о Компании (Все варианты написания Компании Заказчика +отзывы сотрудников работников)+вакансии+работа+кто работал).</p></li>
+                                    </ul>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Постоянный мониторинг запросов выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    5 запросов,<br />
+                                    топ-10
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Подготовка и предоставление Заказчику отчета с оценкой состояния репутационной выдачи Заказчика в «Яндекс» и «Google».</p>
+                                </div>
+                                <div class="packets__value">
+                                    Ежемесячно
+                                </div>
+                            </div>
+
+                            <div class="packets__row">
+                                <div class="packets__info">
+                                    <p class="bold">Выявление проблемных зон в деятельности Заказчика на основе информации из негативных отзывов и предоставление Заказчику рекомендаций по предотвращению повторения волны негатива.</p>
+                                </div>
+                                <div class="packets__value">
+                                    &mdash;
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="packets__more-box">
+                        <a href="#" class="packets__more" data-rows=".xtab-third .packets__row" data-count="9">Далее</a>
+                    </div>
                 </div>
+
             </div>
 
         </div>
     </div>
 </div>
 
+<div class="grateful">
+    <div class="container">
+        <div class="block-caption">Благодарственные письма</div>
+        <div class="grateful__grid grateful-slider">
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/800x1000"><img src="/assets/template/images/1920/blagodar-1.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/801x1000"><img src="/assets/template/images/1920/blagodar-2.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/799x1000"><img src="/assets/template/images/1920/blagodar-3.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/803x1000"><img src="/assets/template/images/1920/blagodar-4.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/798x1000"><img src="/assets/template/images/1920/blagodar-5.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/805x1000"><img src="/assets/template/images/1920/blagodar-3.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/797x1000"><img src="/assets/template/images/1920/blagodar-4.jpg" alt=""></a>
+            </div>
+            <div>
+                <a data-fancybox="grateful" href="https://via.placeholder.com/807x1000"><img src="/assets/template/images/1920/blagodar-5.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="footer"></div>
 
@@ -550,6 +741,7 @@
         crossorigin="anonymous"></script>
 <script src="assets/template/vendor/slick/slick.js"></script>
 <script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
+<script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
 <script src="assets/template/vendor/jquery.inputmask.bundle.js"></script>
 <script src="/assets/template/vendor/circles.min.js"></script>
 <script src="assets/template/js/scripts.js"></script>
