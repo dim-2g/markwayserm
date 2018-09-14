@@ -8,9 +8,9 @@
             </a>
             <div class="topline__menu">
                 <ul class="topline__list">
-                    <li class="active"><a href="#" data-goto=".services">Услуги</a></li>
-                    <li><a href="#" data-goto=".how-works">Аудит репутации в интернете</a></li>
-                    <li><a href="#" data-goto=".samples">Благодарственные письма</a></li>
+                    <li><a href="#" data-goto=".packets">Услуги</a></li>
+                    <li><a href="#" data-goto=".promo">Аудит репутации в интернете</a></li>
+                    <li><a href="#" data-goto=".grateful">Благодарственные письма</a></li>
                 </ul>
             </div>
             <div class="topline__city">
@@ -57,8 +57,8 @@
                                 <span class="tariffs__cur">рублей</span>
                             </div>
                             <div class="tariffs__buttons">
-                                <a href="#" class="btn-orange">Заказать</a>
-                                <a href="#" class="btn-gray">Подробнее</a>
+                                <a href="#order-serm" class="btn-orange" data-fancybox="">Заказать</a>
+                                <a href="#serm-free" class="btn-gray" data-fancybox="">Подробнее</a>
                             </div>
                         </div>
                         <div class="tariffs__or">или</div>
@@ -70,8 +70,8 @@
                                 заполнив форму
                             </div>
                             <div class="tariffs__buttons">
-                                <a href="#" class="btn-orange">Заказать</a>
-                                <a href="#" class="btn-gray">Подробнее</a>
+                                <a href="#order-serm" class="btn-orange" data-fancybox="">Заказать</a>
+                                <a href="#serm-free" class="btn-gray" data-fancybox="">Подробнее</a>
                             </div>
                         </div>
 
@@ -263,7 +263,7 @@
                 </div>
             </div>
             <div class="why__button">
-                <a class="btn-orange" href="#">Заказать управление репутацией</a>
+                <a class="btn-orange" href="#order-serm" data-fancybox="">Заказать управление репутацией</a>
             </div>
         </div>
 
@@ -844,9 +844,9 @@
             </div>
             <div class="footer__menu">
                 <ul class="footer__list">
-                    <li class="active"><a href="#" data-goto=".services">Услуги</a></li>
-                    <li><a href="#" data-goto=".how-works">Аудит репутации в интернете</a></li>
-                    <li><a href="#" data-goto=".samples">Благодарственные письма</a></li>
+                    <li><a href="#" data-goto=".packets">Услуги</a></li>
+                    <li><a href="#" data-goto=".promo">Аудит репутации в интернете</a></li>
+                    <li><a href="#" data-goto=".grateful">Благодарственные письма</a></li>
                 </ul>
             </div>
             <div class="footer__social">
@@ -860,7 +860,7 @@
                 <div><a href="mailto:info@markway.ru" class="footer__email">info@markway.ru</a></div>
             </div>
             <div class="footer__callback">
-                <a class="btn-blue" href="#">Заказать звонок</a>
+                <a class="btn-blue" href="#callback" data-fancybox="">Заказать звонок</a>
             </div>
         </div>
         <div class="footer__copyright">
@@ -889,6 +889,101 @@
             <button type="submit" class="btn-orange">Заказать</button>
         </div>
     </div>
+
+
+    <div id="order-serm" class="xform">
+        <div class="xform__caption">Заказать аудит</div>
+
+        <div class="xform__row">
+            <div class="xform__left">
+                <div class="xform__item">
+                    <div class="xform__label">Ваше имя</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="xform__right">
+                <div class="xform__item">
+                    <div class="xform__label">Ваш Email</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xform__row">
+            <div class="xform__left">
+                <div class="xform__item">
+                    <div class="xform__label">Компания/Бренд</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="xform__right">
+                <div class="xform__item">
+                    <div class="xform__label">Ваш номер телефона</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="phone" data-mask="+7 (999) 999-99-99">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xform__row">
+            <div class="xform__left">
+                <div class="xform__item">
+                    <div class="xform__label">Сколько лет ваша компания/бренд на рынке?</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+                <div class="xform__item xform__item--nomargin">
+                    <div class="xform__label">Сайт</div>
+                    <div class="xform__input-box">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="xform__right">
+                <div class="xform__item xform__item--nomargin">
+                    <div class="xform__label">Дополнительная информация</div>
+                    <div class="xform__input-box">
+                        <textarea class="form-styled" name="question"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="xform__submit">
+            <button type="submit" class="btn-orange">Заказать</button>
+        </div>
+    </div>
+
+
+    <div id="serm-free" class="xform">
+        <div class="xform__caption">Включает в себя</div>
+
+        <div class="serm-more">
+            <div class="serm-more__first">
+                <p><span class="bold">1. Сбор упоминаний о бренде/компании в социальных медиа и СМИ</span></p>
+                <ul>
+                    <li>Социальные сети: ВКонтакте, Facebook, Одноклассники, YouTube, Instagram, Twitter, Google+, Мой Мир, Vimeo, Мир Тесен Блоги, форумы, сайты отзывов</li>
+                    <li>Мессенджеры: каналы и открытые чаты Telegram.</li>
+                    <li>Онлайн СМИ: федеральные, региональные, зарубежные.)</li>
+                </ul>
+                <p class="more-note">Данные предоставляются в форматах Excel, CSV, JSON для последующиего анализа.</p>
+            </div>
+            <div class="serm-more__second">
+                <p><span class="bold">2. Анализ поисковый выдачи ТОП 20 Яндекс и Google</span> по брендовым запросам c указанием ресурсов негативного содержания упоминаний о компании/бренде.</p>
+                <p class="more-note">Данные предоставляются в формате презентации.</p>
+            </div>
+        </div>
+
+
 </div>
 
 
