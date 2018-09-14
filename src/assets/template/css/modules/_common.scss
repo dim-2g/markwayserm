@@ -45,6 +45,10 @@ a{
   padding: 38px 0;
   align-items: center;
   &__menu{
+    display: none;
+    @media($bp-larger-than-mobile){
+      display: block;
+    }
     margin-right: auto;
     margin-top: 1px;
   }
@@ -98,6 +102,10 @@ a{
     }
   }
   &__city{
+    display: none;
+    @media($bp-larger-than-mobile){
+      display: block;
+    }
     width: 162px;
   }
   &__city-item{
@@ -114,6 +122,10 @@ a{
     }
   }
   &__contacts{
+    display: none;
+    @media($bp-larger-than-mobile){
+      display: block;
+    }
     text-align: right;
     margin-right: 15px;
     a{
@@ -194,6 +206,10 @@ a{
 }
 
 .promo{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   border-bottom: 6px solid $gray;
   &__box{
     position: relative;
@@ -260,6 +276,10 @@ a{
 }
 
 .tariffs{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   &__row{
     display: flex;
     align-items: center;
@@ -339,6 +359,10 @@ a{
   color: #ffda70;
 }
 .digits{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 36px 0 86px;
   &__box{
     display: flex;
@@ -373,6 +397,10 @@ a{
 }
 
 .opinion{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   margin-bottom: 50px;
   &__caption{
 
@@ -566,6 +594,10 @@ a{
   }
 }
 .footer{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   background-color: #f0f0f0;
   padding: 34px 0;
   &__logo{
@@ -894,6 +926,10 @@ a{
 
 
 .why {
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   .block-caption{
     margin-bottom: 40px;
   }
@@ -999,7 +1035,10 @@ a{
 }
 
 .serm{
-
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   &__caption{
     margin-bottom: 25px;
   }
@@ -1069,6 +1108,10 @@ a{
 
 $issue-padding-bottom: 50px;
 .issues{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 68px 0 60px;
   min-height: 917px;
   .block-caption{
@@ -1129,6 +1172,10 @@ $issue-padding-bottom: 50px;
 
 
 .advantages{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 40px 0 16px;
   &__caption{
     margin-bottom: 15px;
@@ -1193,6 +1240,10 @@ $issue-padding-bottom: 50px;
 }
 
 .packets{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 40px 0;
   &__caption{
     font-size: 59px;
@@ -1358,6 +1409,10 @@ $issue-padding-bottom: 50px;
 }
 
 .grateful{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 60px 0 40px;
   .block-caption{
     margin-bottom: 60px;
@@ -1427,6 +1482,10 @@ textarea.form-styled{
 }
 
 .order{
+  display: none;
+  @media($bp-larger-than-mobile){
+    display: block;
+  }
   padding: 60px 0;
 }
 
