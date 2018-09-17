@@ -103,7 +103,7 @@
     <div class="container">
         <div class="digits__box">
             <div class="digits__item">
-                <div class="digits__value">
+                <div class="digits__value digits__value--success">
                     3000
                 </div>
                 <div class="digits__text">
@@ -135,7 +135,7 @@
 
 <div class="opinion">
     <div class="container">
-        <div class="opinion__caption block-caption">Насколько важна репутация?</div>
+        <div class="opinion__caption block-caption">Насколько<br class="in-mobile"> важна репутация?</div>
     </div>
     <div class="opinion__box">
         <div class="container">
@@ -1020,9 +1020,13 @@
 
 
 <script>
+    var chart_radius = 64;
+    if ($(window).width()<1000) {
+        chart_radius = 53;
+    }
     var myCircle = Circles.create({
         id:                  'circles-1',
-        radius:              64,
+        radius:              chart_radius,
         value:               66,
         maxValue:            100,
         width:               12,
@@ -1039,7 +1043,7 @@
 
     var myCircle2 = Circles.create({
         id:                  'circles-2',
-        radius:              64,
+        radius:              chart_radius,
         value:               58,
         maxValue:            100,
         width:               12,
@@ -1056,7 +1060,7 @@
 
     var myCircle3 = Circles.create({
         id:                  'circles-3',
-        radius:              64,
+        radius:              chart_radius,
         value:               60,
         maxValue:            100,
         width:               12,
@@ -1073,7 +1077,7 @@
 
     var myCircle4 = Circles.create({
         id:                  'circles-4',
-        radius:              64,
+        radius:              chart_radius,
         value:               80,
         maxValue:            100,
         width:               12,

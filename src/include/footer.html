@@ -14,9 +14,13 @@
 
 
 <script>
+    var chart_radius = 64;
+    if ($(window).width()<1000) {
+        chart_radius = 53;
+    }
     var myCircle = Circles.create({
         id:                  'circles-1',
-        radius:              64,
+        radius:              chart_radius,
         value:               66,
         maxValue:            100,
         width:               12,
@@ -33,7 +37,7 @@
 
     var myCircle2 = Circles.create({
         id:                  'circles-2',
-        radius:              64,
+        radius:              chart_radius,
         value:               58,
         maxValue:            100,
         width:               12,
@@ -50,7 +54,7 @@
 
     var myCircle3 = Circles.create({
         id:                  'circles-3',
-        radius:              64,
+        radius:              chart_radius,
         value:               60,
         maxValue:            100,
         width:               12,
@@ -67,7 +71,7 @@
 
     var myCircle4 = Circles.create({
         id:                  'circles-4',
-        radius:              64,
+        radius:              chart_radius,
         value:               80,
         maxValue:            100,
         width:               12,
