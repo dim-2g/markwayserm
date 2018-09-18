@@ -1542,10 +1542,11 @@ a{
     display: block;
   }
   &__caption{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     line-height: 120%;
     @media($bp-larger-than-mobile){
       line-height: 100%;
+      margin-bottom: 25px;
     }
   }
   &__wrapper{
@@ -1555,8 +1556,11 @@ a{
     }
   }
   &__box{
-    min-height: 670px;
+    min-height: 835px;
     position: relative;
+    @media($bp-larger-than-mobile){
+      min-height: 670px;
+    }
   }
   &__header{
     font-weight: $font-weight-semibold;
@@ -1648,84 +1652,156 @@ a{
   }
   &__flower{
     position: absolute;
-    bottom: -100px;
-    right: 356px;
+    bottom: -46px;
+    left: -17px;
+    width: 86px;
+    @media($bp-larger-than-mobile) {
+      left: auto;
+      bottom: -100px;
+      right: 356px;
+      width: auto;
+    }
+
   }
 }
 
 $issue-padding-bottom: 50px;
 .issues{
-  display: none;
-  @media($bp-larger-than-mobile){
-    display: block;
-  }
-  padding: 68px 0 60px;
+  padding: 68px 0 0px;
   min-height: 917px;
+  @media($bp-larger-than-mobile){
+    padding: 60px 0 60px;
+  }
   .block-caption{
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    line-height: 120%;
+    @media($bp-larger-than-mobile){
+      line-height: 100%;
+      margin-bottom: 60px;
+    }
   }
   &__box{
-    padding-right: 50%;
+    padding-top: 288px;
     position: relative;
+    @media($bp-larger-than-mobile){
+      padding-top: 0;
+      padding-right: 50%;
+    }
   }
   &__image{
     position: absolute;
-    top: -17px;
+    top: 9px;
     right: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 256px;
+    @media($bp-larger-than-mobile){
+      left: auto;
+      transform: none;
+      height: auto;
+      top: -17px;
+      right: 48px;
+    }
   }
   &__grid{
-    display: table;
+    @media($bp-larger-than-mobile) {
+      display: table;
+    }
   }
   &__row{
-    display: table-row;
+    margin-bottom: 23px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 0;
+      display: table-row;
+    }
     > div{
-      display: table-cell;
-      vertical-align: middle;
+      @media($bp-larger-than-mobile) {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
     &:last-child{
+      margin-bottom: 0;
       .issues__name{
-        padding-bottom: 0;
+        @media($bp-larger-than-mobile) {
+          padding-bottom: 0;
+        }
       }
       .issues__arrow{
-        padding-bottom: 0;
+        @media($bp-larger-than-mobile) {
+          padding-bottom: 0;
+        }
       }
       .issues__summary{
-        padding-bottom: 0;
+        @media($bp-larger-than-mobile) {
+          padding-bottom: 0;
+        }
       }
     }
   }
   &__name{
     font-weight: $font-weight-semibold;
     color: $blue;
-    font-size: 36px;
+    font-size: 16px;
     line-height: 90%;
-    display: table-cell;
     vertical-align: top;
-    padding-bottom: $issue-padding-bottom;
+    padding-bottom: 10px;
+    text-align: center;
+    @media($bp-larger-than-mobile) {
+      font-size: 36px;
+      display: table-cell;
+      padding-bottom: $issue-padding-bottom;
+    }
   }
   &__arrow{
     padding: 0 46px;
-    display: table-cell;
     vertical-align: top;
-    padding-bottom: $issue-padding-bottom;
+    padding-bottom: 4px;
+    text-align: center;
+    @media($bp-larger-than-mobile) {
+      display: table-cell;
+      padding-bottom: $issue-padding-bottom;
+    }
+    &:before{
+      content: '';
+      display: inline-block;
+      @include sprite($arrow-orange-down-320);
+    }
+    img{
+      display: none;
+      @media($bp-larger-than-mobile) {
+        display: inline-block;
+      }
+    }
   }
   &__summary{
-    display: table-cell;
     vertical-align: top;
-    font-size: 18px;
-    padding-bottom: $issue-padding-bottom;
+    font-size: 12px;
+    padding-bottom: 10px;
+    text-align: center;
+    @media($bp-larger-than-mobile) {
+      text-align: left;
+      display: table-cell;
+      font-size: 18px;
+      padding-bottom: $issue-padding-bottom;
+    }
   }
 }
 
 
 .advantages{
-  display: none;
+  padding: 28px 0 0;
   @media($bp-larger-than-mobile){
+    padding: 40px 0 16px;
     display: block;
   }
-  padding: 40px 0 16px;
   &__caption{
-    margin-bottom: 15px;
+    margin-bottom: 9px;
+    line-height: 120%;
+    @media($bp-larger-than-mobile){
+      line-height: 100%;
+      margin-bottom: 15px;
+    }
   }
   &__hr{
     height: 6px;
@@ -1738,74 +1814,143 @@ $issue-padding-bottom: 50px;
       position: absolute;
       content: "";
       display: inline-block;
-      right: 645px;
+      left: -14px;
       top: 100%;
-      @include sprite($peak-up-gray);
-      transform: rotate(180deg) translateY(-5px);
+      @include sprite($peak-down-gray-320);
+      transform: translateY(5px);
+      @media($bp-larger-than-mobile) {
+        left: auto;
+        position: absolute;
+        content: "";
+        display: inline-block;
+        right: 645px;
+        top: 100%;
+        @include sprite($peak-up-gray);
+        transform: rotate(180deg) translateY(-5px);
+      }
     }
     &:after{
       position: absolute;
       content: "";
       display: inline-block;
-      right: 281px;
+      right: -6px;
       bottom: 100%;
-      @include sprite($peak-up-gray-small);
+      @include sprite($peak-down-gray-small-320);
+      transform: rotate(180deg);
+      @media($bp-larger-than-mobile) {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        right: 281px;
+        bottom: 100%;
+        @include sprite($peak-up-gray-small);
+      }
     }
   }
 
   &__list{
-    margin-top: 73px;
+    margin-top: 54px;
     display: flex;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    @media($bp-larger-than-mobile) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 73px;
+      flex-wrap: nowrap;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &__item{
+    width: 50%;
+    @media($bp-larger-than-mobile) {
+      width: auto;
+    }
   }
   &__card{
     max-width: 300px;
+    margin-bottom: 30px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: auto;
+    }
   }
   &__image{
     text-align: center;
-    height: 185px;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      height: 185px;
+    }
     img{
       max-height: 100%;
       max-width: 100%;
     }
   }
   &__name{
-    font-size: 30px;
+    font-size: 16px;
     font-weight: $font-weight-semibold;
     color: $blue;
     text-align: center;
-    line-height: 100%;
-    margin-bottom: 13px;
+    line-height: 110%;
+    margin-bottom: 11px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 13px;
+      font-size: 30px;
+      line-height: 100%;
+    }
   }
   &__info{
-    font-size: 18px;
+    font-size: 12px;
     font-weight: $font-weight-regular;
     text-align: center;
+    @media($bp-larger-than-mobile) {
+      font-size: 18px;
+    }
   }
 }
 
 .packets{
-  display: none;
+  //display: none;
+  padding: 4px 0;
   @media($bp-larger-than-mobile){
     display: block;
+    padding: 40px 0;
   }
-  padding: 40px 0;
   &__caption{
-    font-size: 59px;
-    margin-bottom: 40px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 120%;
+    @media($bp-larger-than-mobile){
+      font-size: 59px;
+      margin-bottom: 40px;
+      line-height: 100%;
+    }
   }
   &__box{
     background-color: $gray;
-    padding: 85px 0 62px;
+    padding: 26px 0 15px;
+    @media($bp-larger-than-mobile){
+      padding: 85px 0 62px;
+    }
   }
   &__tab-inside{
     background-color: #fff;
-    border-radius: 0 8px 8px 8px;
+    border-radius: 8px;
     position: relative;
     margin-bottom: 100px;
     padding-top: 30px;
+    @media($bp-larger-than-mobile){
+      border-radius: 0 8px 8px 8px;
+    }
     &:after{
       content: "";
       display: inline-block;
@@ -1817,23 +1962,58 @@ $issue-padding-bottom: 50px;
     }
   }
   &__list{
-    display: table;
-    width: 100%;
+    @media($bp-larger-than-mobile) {
+      display: table;
+      width: 100%;
+    }
   }
   &__row{
-    display: table-row;
+    @media($bp-larger-than-mobile) {
+      display: table-row;
+    }
     //opacity: 1;
     //transition: $cubic;
     > div{
-      display: table-cell;
-      vertical-align: middle;
+      @media($bp-larger-than-mobile) {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
     + .packets__row{
       .packets__info{
         border-top: 4px $gray solid;
       }
       .packets__value{
-        border-top: 4px $gray solid;
+        @media($bp-larger-than-mobile) {
+          border-top: 4px $gray solid;
+        }
+      }
+    }
+    &--header{
+      .packets__info{
+        border-bottom: 0 none;
+        @media($bp-larger-than-mobile) {
+          border-bottom: 4px $gray solid;
+        }
+      }
+      .packets__value{
+        display: none;
+        @media($bp-larger-than-mobile) {
+          display: table-cell;
+        }
+      }
+      + .packets__row{
+        .packets__info{
+          border-top: 0 none;
+        }
+        .packets__value{
+          border-top: 0 none;
+        }
+      }
+    }
+    + .packets__row--header{
+      .packets__name{
+        margin-top: 30px;
       }
     }
     .hide{
@@ -1843,22 +2023,55 @@ $issue-padding-bottom: 50px;
     }
   }
   &__info{
-    padding: 20px 40px;
-    border-right: 4px $gray solid;
-    font-size: 18px;
+    padding: 0px 15px;
+    border-bottom: 4px $gray solid;
+    font-size: 12px;
+    @media($bp-larger-than-mobile){
+      border-right: 4px $gray solid;
+      padding: 20px 40px;
+      font-size: 18px;
+    }
     .bold{
-      font-size: 20px;
+      font-size: 12px;
+      @media($bp-larger-than-mobile){
+        font-size: 20px;
+      }
     }
   }
   &__value{
-    width: 450px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    @media($bp-larger-than-mobile){
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 30px;
+      width: 450px;
+    }
   }
   &__name{
     color: $orange;
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 14px;
+    @media($bp-larger-than-mobile){
+      font-size: 30px;
+    }
+    //margin-bottom: 30px;
+  }
+  &__compare{
+    &--mobile{
+      display: block;
+      @media($bp-larger-than-mobile) {
+        display: none;
+      }
+      .btn-orange{
+        width: 100%;
+        max-width: 360px;
+        height: 48px;
+        line-height: 48px;
+        margin-bottom: 26px;
+      }
+    }
   }
   ul{
     list-style-type: none;
@@ -1887,9 +2100,12 @@ $issue-padding-bottom: 50px;
     font-family: Acrom, sans-serif;
   }
   &__nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
+    @media($bp-larger-than-mobile){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     ul{
       list-style-type: none;
       display: flex;
