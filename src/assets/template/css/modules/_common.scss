@@ -618,7 +618,7 @@ a{
   }
   &__left{
     position: relative;
-    padding: 21px 22px 30px 22px;
+    padding: 21px 22px 0px 22px;
     z-index: 2;
     background-color: $gray;
     @media($bp-larger-than-mobile) {
@@ -643,7 +643,7 @@ a{
       display: inline-block;
       position: absolute;
       top: 0;
-      left: 30px;
+      left: 58px;
       content: "";
       @include sprite($peak-down-gray-small-320);
       @media($bp-larger-than-mobile) {
@@ -1392,7 +1392,7 @@ a{
     }
   }
   &__box {
-    padding: 16px 0 100px;
+    padding: 16px 0 35px;
     min-height: 650px;
     @media($bp-larger-than-mobile){
       padding: 44px 0 100px;
@@ -1413,8 +1413,9 @@ a{
   }
   &__info{
     padding: 0 0 0 0;
-    margin-bottom: 72px;
+    margin-bottom: 16px;
     @media($bp-larger-than-mobile){
+      margin-bottom: 72px;
       padding: 0 25px 0 616px;
     }
     &:after {
@@ -1448,20 +1449,34 @@ a{
   }
   &__button{
     text-align: center;
-    padding-right: 65px;
+    padding-right: 0;
+    @media($bp-larger-than-mobile){
+      padding-right: 65px;
+    }
     a{
-      height: 70px;
-      line-height: 74px;
-      padding: 0px 86px;
+      height: 48px;
+      line-height: 48px;
+      padding: 0px 5px;
       border-radius: 36px;
-      font-size: 18px;
+      font-size: 12px;
+      width: 100%;
+      @media($bp-larger-than-mobile){
+        padding: 0px 86px;
+        font-size: 18px;
+        width: auto;
+        height: 70px;
+        line-height: 74px;
+      }
     }
   }
 
   ol {
     &.numeric{
-      margin-bottom: 40px;
+      margin-bottom: 0;
       counter-reset: olCounter;
+      @media($bp-larger-than-mobile) {
+        margin-bottom: 40px;
+      }
     }
     li {
       list-style-type: none;
@@ -1522,15 +1537,22 @@ a{
 }
 
 .serm{
-  display: none;
+  //display: none;
   @media($bp-larger-than-mobile){
     display: block;
   }
   &__caption{
     margin-bottom: 25px;
+    line-height: 120%;
+    @media($bp-larger-than-mobile){
+      line-height: 100%;
+    }
   }
   &__wrapper{
-    background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
+    background: $gray url('../images/1920/serm__bg-320.jpg') top left no-repeat;
+    @media($bp-larger-than-mobile) {
+      background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
+    }
   }
   &__box{
     min-height: 670px;
@@ -1538,51 +1560,89 @@ a{
   }
   &__header{
     font-weight: $font-weight-semibold;
-    font-size: 36px;
+    font-size: 16px;
     color: $blue;
     line-height: 90%;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
+    @media($bp-larger-than-mobile){
+      font-size: 36px;
+      margin-bottom: 6px;
+    }
   }
   &__info{
-    font-size: 18px;
+    font-size: 12px;
     line-height: 120%;
+    @media($bp-larger-than-mobile){
+      font-size: 18px;
+    }
   }
   &__item{
     position: absolute;
     &--seo{
       max-width: 190px;
-      top: 199px;
-      left: 0px;
+      top: 38px;
+      left: 97px;
+      @media($bp-larger-than-mobile) {
+        top: 199px;
+        left: 0px;
+      }
     }
     &--monitoring{
       max-width: 250px;
-      top: 379px;
-      left: 191px;
+      top: 134px;
+      left: 163px;
+      @media($bp-larger-than-mobile) {
+        top: 379px;
+        left: 191px;
+      }
     }
     &--orm{
       max-width: 275px;
-      top: 172px;
-      left: 353px;
+      top: 219px;
+      left: 82px;
+      @media($bp-larger-than-mobile) {
+        top: 172px;
+        left: 353px;
+      }
     }
     &--serm{
       max-width: 270px;
-      top: 437px;
-      left: 606px;
+      top: 328px;
+      left: 58px;
+      @media($bp-larger-than-mobile) {
+        top: 437px;
+        left: 606px;
+      }
     }
     &--pr{
       max-width: 250px;
-      top: 290px;
-      left: 769px;
+      top: 432px;
+      left: 178px;
+      @media($bp-larger-than-mobile) {
+        top: 290px;
+        left: 769px;
+      }
     }
     &--smm{
       max-width: 250px;
-      top: 152px;
-      left: 969px;
+      top: 541px;
+      left: 82px;
+      @media($bp-larger-than-mobile) {
+        top: 152px;
+        left: 969px;
+      }
     }
     &--jur{
       max-width: 300px;
-      top: 301px;
-      left: 1202px;
+      top: 669px;
+      left: 77px;
+      @media($bp-larger-than-mobile) {
+        top: 301px;
+        left: 1202px;
+      }
+      .serm__header{
+        margin-bottom: 8px;
+      }
 
     }
   }
