@@ -241,7 +241,7 @@ gulp.task('watch', function(){
     watch([path.watch.sprites], function(event, cb) {
         gulp.start('sprite:dev');
     });
-    //watch([path.watch.js, path.watch.tpl]).on('change', browserSync.reload);
+    watch([path.watch.js, path.watch.tpl]).on('change', browserSync.reload);
 });
 
 // Запуск локального веб-сервера

@@ -113,6 +113,9 @@ initGratefulSlider  = function() {
                     breakpoint: 550,
                     settings: {
                         slidesToShow: 1,
+                        //arrows: false,
+                        rows: 2,
+                        slidesPerRow: 2
                     }
                 }
             ]
