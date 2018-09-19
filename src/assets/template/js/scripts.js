@@ -145,6 +145,6 @@ $(document).scroll(function(){
 });
 
 printWidth = function() {
-    var topline_width = parseInt($('.boxis').width()) + 2;
+    var topline_width = parseInt($('.topline').width()) + 2;
     $('title').html($(window).width() + ' : ' + topline_width);
 };
