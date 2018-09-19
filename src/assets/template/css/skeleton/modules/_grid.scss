@@ -102,17 +102,27 @@
 
 }
 
-
+@media (#{$bp-larger-than-tablet}) {
+  .container {
+    width: $container-width-larger-than-tablet;
+  }
+}
 @media (#{$bp-larger-than-desktop}) {
   .container {
     width: $container-width-larger-than-desktop;
   }
 }
-@media (#{$bp-larger-than-mac}) {
+@media (#{$bp-larger-than-desktophd}) {
   .container {
-    width: $container-width-larger-than-mac;
+    width: $container-width-larger-than-desktophd;
   }
 }
+@media (#{$bp-larger-than-desktopfullhd}) {
+  .container {
+    width: $container-width-larger-than-desktopfullhd;
+  }
+}
+
 
 
 

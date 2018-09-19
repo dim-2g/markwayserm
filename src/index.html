@@ -18,7 +18,7 @@
 <div class="header">
     <div class="container">
         <div class="topline">
-            <div class="burger"><span></span></div>
+            <div class="burger toggle-menu"><span></span></div>
             <a href="/" class="logo">
                 <img src="/assets/template/images/1920/logo.png" alt="">
             </a>
@@ -39,6 +39,27 @@
             <div class="topline__callback">
                 <a class="btn-blue" href="#callback" data-fancybox="">Заказать звонок</a>
             </div>
+
+            <div class="mobile-menu">
+                <div class="mobile-menu__top">
+                    <div class="mobile-menu__contacts">
+                        <span class="mobile-menu__city-item">Москва</span>
+                    </div>
+                    <div class="mobile-menu__timework">
+                        <div><a href="tel:88005559718" class="mobile-menu__phone">8-800-555-97-18</a></div>
+                        <div><a href="mailto:info@markway.ru" class="mobile-menu__email">info@markway.ru</a></div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#" data-goto=".packets">Услуги</a></li>
+                    <li><a href="#" data-goto=".promo">Аудит репутации<br /> в интернете</a></li>
+                    <li><a href="#" data-goto=".grateful">Благодарственные<br /> письма</a></li>
+                </ul>
+                <div class="mobile-menu__bottom">
+                    <a class="btn-blue" href="#callback" data-fancybox="">Заказать звонок</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -436,7 +457,7 @@
 <div class="advantages">
     <div class="container">
         <div class="advantages__caption block-caption">
-            Наши преимущества
+            Наши<br class="in-mobile" /> преимущества
         </div>
     </div>
     <div class="advantages__hr">
@@ -1066,77 +1087,95 @@
 
 
 <script>
-    var chart_radius = 64;
-    if ($(window).width()<1000) {
-        chart_radius = 53;
+
+    initCharts = function() {
+        var chart_radius = 64;
+        if ($(window).width()<1000) {
+            chart_radius = 53;
+        }
+        var myCircle = Circles.create({
+            id:                  'circles-1',
+            radius:              chart_radius,
+            value:               66,
+            maxValue:            100,
+            width:               12,
+            text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
+            colors:              ['#4fadfc', '#30c9fd'],
+            duration:            400,
+            wrpClass:            'circles-wrp',
+            textClass:           'circles-text',
+            valueStrokeClass:    'circles-valueStroke',
+            maxValueStrokeClass: 'circles-maxValueStroke',
+            styleWrapper:        true,
+            styleText:           false
+        });
+
+        var myCircle2 = Circles.create({
+            id:                  'circles-2',
+            radius:              chart_radius,
+            value:               58,
+            maxValue:            100,
+            width:               12,
+            text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
+            colors:              ['#4fadfc', '#30c9fd'],
+            duration:            400,
+            wrpClass:            'circles-wrp',
+            textClass:           'circles-text',
+            valueStrokeClass:    'circles-valueStroke',
+            maxValueStrokeClass: 'circles-maxValueStroke',
+            styleWrapper:        true,
+            styleText:           false
+        });
+
+        var myCircle3 = Circles.create({
+            id:                  'circles-3',
+            radius:              chart_radius,
+            value:               60,
+            maxValue:            100,
+            width:               12,
+            text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
+            colors:              ['#4fadfc', '#30c9fd'],
+            duration:            400,
+            wrpClass:            'circles-wrp',
+            textClass:           'circles-text',
+            valueStrokeClass:    'circles-valueStroke',
+            maxValueStrokeClass: 'circles-maxValueStroke',
+            styleWrapper:        true,
+            styleText:           false
+        });
+
+        var myCircle4 = Circles.create({
+            id:                  'circles-4',
+            radius:              chart_radius,
+            value:               80,
+            maxValue:            100,
+            width:               12,
+            text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
+            colors:              ['#4fadfc', '#30c9fd'],
+            duration:            400,
+            wrpClass:            'circles-wrp',
+            textClass:           'circles-text',
+            valueStrokeClass:    'circles-valueStroke',
+            maxValueStrokeClass: 'circles-maxValueStroke',
+            styleWrapper:        true,
+            styleText:           false
+        });
+    };
+
+    initCharts();
+
+    var process;
+    $(window).resize(function(){
+        clearTimeout(process);
+        process = setTimeout(resizeFunction, 100);
+    });
+
+    function resizeFunction(){
+        var width = $(window).width();
+        initCharts();
     }
-    var myCircle = Circles.create({
-        id:                  'circles-1',
-        radius:              chart_radius,
-        value:               66,
-        maxValue:            100,
-        width:               12,
-        text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
-        colors:              ['#4fadfc', '#30c9fd'],
-        duration:            400,
-        wrpClass:            'circles-wrp',
-        textClass:           'circles-text',
-        valueStrokeClass:    'circles-valueStroke',
-        maxValueStrokeClass: 'circles-maxValueStroke',
-        styleWrapper:        true,
-        styleText:           false
-    });
 
-    var myCircle2 = Circles.create({
-        id:                  'circles-2',
-        radius:              chart_radius,
-        value:               58,
-        maxValue:            100,
-        width:               12,
-        text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
-        colors:              ['#4fadfc', '#30c9fd'],
-        duration:            400,
-        wrpClass:            'circles-wrp',
-        textClass:           'circles-text',
-        valueStrokeClass:    'circles-valueStroke',
-        maxValueStrokeClass: 'circles-maxValueStroke',
-        styleWrapper:        true,
-        styleText:           false
-    });
 
-    var myCircle3 = Circles.create({
-        id:                  'circles-3',
-        radius:              chart_radius,
-        value:               60,
-        maxValue:            100,
-        width:               12,
-        text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
-        colors:              ['#4fadfc', '#30c9fd'],
-        duration:            400,
-        wrpClass:            'circles-wrp',
-        textClass:           'circles-text',
-        valueStrokeClass:    'circles-valueStroke',
-        maxValueStrokeClass: 'circles-maxValueStroke',
-        styleWrapper:        true,
-        styleText:           false
-    });
-
-    var myCircle4 = Circles.create({
-        id:                  'circles-4',
-        radius:              chart_radius,
-        value:               80,
-        maxValue:            100,
-        width:               12,
-        text:                function(value){return '>' + value + '<span class="circles-percent">%</span>';},
-        colors:              ['#4fadfc', '#30c9fd'],
-        duration:            400,
-        wrpClass:            'circles-wrp',
-        textClass:           'circles-text',
-        valueStrokeClass:    'circles-valueStroke',
-        maxValueStrokeClass: 'circles-maxValueStroke',
-        styleWrapper:        true,
-        styleText:           false
-    });
 </script>
 
 
