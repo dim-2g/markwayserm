@@ -27,7 +27,8 @@ $(function() {
         $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
     });
 
-    $('[data-tab]').click(function(){
+    $('[data-tab]').click(function(e){
+
         $('[data-tab]').removeClass('active');
         $(this).addClass('active');
 
@@ -38,6 +39,11 @@ $(function() {
             $('.xtab').css({"opacity": 1});
         }, 120);
         $(data_tab).addClass('active');
+
+        if ($(e.target).hasClass('xtab-nav__open')) {
+            var selector = $(this).attr('data-tab');
+            $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
+        }
 
         return false;
     });
