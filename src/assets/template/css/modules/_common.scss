@@ -54,6 +54,7 @@ a{
   left: 4px;
   top: 12px;
   cursor: pointer;
+  background: transparent url('/assets/template/images/1920/mobile-menu__bg.png') -10000px 0 no-repeat;
   @media($bp-larger-than-tablet){
 
   }
@@ -180,6 +181,115 @@ a{
 
 }
 
+.mobile-menu-styled {
+  background: transparent url('/assets/template/images/1920/mobile-menu__bg.png') top left no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: none;
+  z-index: 100;
+  width: 320px;
+  &__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    &:before{
+      display: inline-block;
+      content: "";
+      @include sprite($close-gradient)
+    }
+  }
+  &__box{
+    padding: 40px 20px;
+  }
+  &__contacts{
+
+    margin-right: 15px;
+    margin-bottom: 30px;
+    line-height: 150%;
+    @media($bp-larger-than-tablet){
+      display: none;
+    }
+    a{
+      transition: $anim;
+    }
+  }
+
+  &__callback{
+    display: block;
+    @media($bp-larger-than-tablet){
+      display: none;
+    }
+  }
+  &__phone{
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  &__email{
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    padding-right: 3px;
+  }
+
+  &__list-wrapper{
+    margib-bottom: 50px;
+  }
+  &__list{
+    list-style-type: none;
+    margin-bottom: 0;
+    li{
+
+      margin-bottom: 25px;
+      &.active{
+        a{
+          &:before{
+            width: 100%;
+            left: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    a{
+      font-size: 14px;
+      letter-spacing: -0.1px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+      font-weight: 300;
+      margin-bottom: 10px;
+      position: relative;
+      &:before{
+        display: inline-block;
+        height: 6px;
+        width: 0;
+        opacity: 0;
+        content: "";
+        background: $gradient;
+        position: absolute;
+        bottom: -8px;
+        transition: $cubic;
+        text-align: center;
+        left: 50%;
+      }
+      &:hover{
+        &:before{
+          width: 100%;
+          left: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
 
 .topline{
   display: flex;
@@ -449,7 +559,7 @@ a{
       @include sprite($peak-up-gray);
       @media($bp-larger-than-tablet){
         bottom: -1px;
-        right: 267px;
+        right: 241px;
         content: "";
         @include sprite($peak-up-gray-small);
       }
@@ -1996,6 +2106,7 @@ a{
     @media($bp-larger-than-desktopfullhd){
       margin-bottom: 40px;
       line-height: 120%;
+      font-size: 60px;
     }
   }
   &__box {
@@ -2185,22 +2296,31 @@ a{
     }
   }
   &__wrapper{
-    background: $gray url('../images/1920/serm__bg-320.jpg') top left no-repeat;
+
+    //background: $gray url('../images/1920/serm__bg-320.jpg') top left no-repeat;
     @media($bp-larger-than-tablet) {
-      background: $gray url('../images/1920/serm__bg-750.jpg') top center no-repeat;
+      //background: $gray url('../images/1920/serm__bg-750.jpg') top center no-repeat;
+      background:$gray;
     }
     @media($bp-larger-than-desktopfullhd) {
-      background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
+      //background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
     }
   }
   &__box{
     min-height: 835px;
     position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: $gray url('../images/1920/serm__bg-320.jpg') top left no-repeat;
     @media($bp-larger-than-tablet) {
+      margin-left: 0;
+      margin-right: 0;
       min-height: 533px;
+      background: $gray url('../images/1920/serm__bg-750.jpg') top center no-repeat;
     }
     @media($bp-larger-than-desktopfullhd){
       min-height: 670px;
+      background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
     }
   }
   &__header{
@@ -2236,7 +2356,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 199px;
         left: 0px;
-        max-width: none;
+        max-width: 190px;
       }
     }
     &--monitoring{
@@ -2251,7 +2371,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 379px;
         left: 191px;
-        max-width: none;
+        max-width: 250px;
       }
     }
     &--orm{
@@ -2266,7 +2386,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 172px;
         left: 353px;
-        max-width: none;
+        max-width: 275px;
       }
     }
     &--serm{
@@ -2281,6 +2401,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 437px;
         left: 606px;
+        max-width: 270px;
       }
     }
     &--pr{
@@ -2295,7 +2416,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 290px;
         left: 769px;
-        max-width: none;
+        max-width: 250px;
       }
     }
     &--smm{
@@ -2310,7 +2431,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 152px;
         left: 969px;
-        max-width: none;
+        max-width: 250px;
       }
     }
     &--jur{
@@ -2325,6 +2446,7 @@ a{
       @media($bp-larger-than-desktopfullhd) {
         top: 301px;
         left: 1202px;
+        max-width: 300px;
       }
       .serm__header{
         margin-bottom: 8px;
@@ -2362,7 +2484,7 @@ $issue-padding-bottom-tablet: 22px;
     min-height: auto;
   }
   @media($bp-larger-than-desktopfullhd){
-    padding: 74px 0 60px;
+    padding: 74px 0 46px;
     min-height: 917px;
   }
   .block-caption{
@@ -2376,6 +2498,7 @@ $issue-padding-bottom-tablet: 22px;
     @media($bp-larger-than-desktopfullhd){
       line-height: 120%;
       margin-bottom: 60px;
+      font-size: 60px;
     }
     br{
       display: inline;
@@ -2446,7 +2569,7 @@ $issue-padding-bottom-tablet: 22px;
       }
       @media($bp-larger-than-desktopfullhd) {
         display: table-cell;
-        vertical-align: middle;
+        //vertical-align: middle;
       }
     }
     &:last-child{
@@ -2503,6 +2626,8 @@ $issue-padding-bottom-tablet: 22px;
     @media($bp-larger-than-desktopfullhd) {
       display: table-cell;
       padding-bottom: $issue-padding-bottom;
+      padding: 0 50px;
+      vertical-align: top;
     }
     &:before{
       content: '';
@@ -3249,8 +3374,8 @@ $issue-padding-bottom-tablet: 22px;
     padding-bottom: 0;
   }
   @media($bp-larger-than-desktopfullhd){
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -30px;
+    margin-right: -30px;
     padding-bottom: 0;
   }
   .slick-prev,
@@ -3286,7 +3411,7 @@ $issue-padding-bottom-tablet: 22px;
       opacity: 0.5;
     }
     @media($bp-larger-than-desktopfullhd) {
-      left: -150px;
+      left: -100px;
       transform: translateY(-50%);
     }
   }
@@ -3299,7 +3424,7 @@ $issue-padding-bottom-tablet: 22px;
       opacity: 0.5;
     }
     @media($bp-larger-than-desktopfullhd) {
-      right: -150px;
+      right: -100px;
       transform: translateY(-50%);
     }
   }
@@ -3465,9 +3590,10 @@ textarea.form-styled{
     }
   }
   &__grid{
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
     @media($bp-larger-than-tablet){
+      display: flex;
       flex-direction: row;
     }
   }
@@ -3484,10 +3610,13 @@ textarea.form-styled{
     }
   }
   &__right{
-    width: 100%;
+    @media($bp-larger-than-tablet) {
+      width: 100%;
+    }
   }
   &__item{
     margin-bottom: 18px;
+    //height: 76px;
     @media($bp-larger-than-tablet) {
       margin-bottom: 16px;
     }
@@ -3513,7 +3642,7 @@ textarea.form-styled{
   input[type="text"]{
     border: 0 none;
     height: 47px;
-    line-height: 47;
+    line-height: 47px;
     padding: 0 20px;
     font-weight: $font-weight-semibold;
     font-size: 20px;
@@ -3665,8 +3794,11 @@ textarea.form-styled{
     }
   }
   &#callback{
-    max-width: 518px;
+    max-width: 400px;
     width: 100%;
+    @media($bp-larger-than-desktopfullhd) {
+      max-width: 518px;
+    }
   }
   &#order-serm{
     max-width: 1014px;
@@ -3676,6 +3808,12 @@ textarea.form-styled{
     max-width: 984px;
     width: 100%;
     overflow: hidden;
+  }
+  &#wikiserm{
+    max-width: 700px;
+    .promo__wiki{
+      display: block;
+    }
   }
   &__row{
     display: flex;

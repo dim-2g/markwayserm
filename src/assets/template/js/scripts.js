@@ -15,10 +15,15 @@ $(function() {
         mask = input.attr('data-mask');
         input.inputmask({"mask": mask});
     })
-
+/*
     $('.toggle-menu').on('click', function () {
         $('.mobile-menu').slideToggle();
     });
+*/
+    $('.toggle-menu').on('click', function () {
+        $('.mobile-menu-styled').slideToggle();
+    });
+
     //$('[data-mask]').inputmask({"mask": $(this).attr('data-mask')});
 
     $('body').on('click', '[data-goto]', function(e) {

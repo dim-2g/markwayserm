@@ -53,6 +53,17 @@ $bracket-total-width: 586px;
 $bracket-total-height: 565px;
 $bracket-image: '/assets/template/css/sprites/sprite.png';
 $bracket: (529px, 0px, -529px, 0px, 57px, 195px, 586px, 565px, '/assets/template/css/sprites/sprite.png', 'bracket', );
+$close-gradient-name: 'close-gradient';
+$close-gradient-x: 215px;
+$close-gradient-y: 463px;
+$close-gradient-offset-x: -215px;
+$close-gradient-offset-y: -463px;
+$close-gradient-width: 26px;
+$close-gradient-height: 26px;
+$close-gradient-total-width: 586px;
+$close-gradient-total-height: 565px;
+$close-gradient-image: '/assets/template/css/sprites/sprite.png';
+$close-gradient: (215px, 463px, -215px, -463px, 26px, 26px, 586px, 565px, '/assets/template/css/sprites/sprite.png', 'close-gradient', );
 $computer-320-name: 'computer-320';
 $computer-320-x: 0px;
 $computer-320-y: 379px;
@@ -397,7 +408,7 @@ $xform-close: (484px, 68px, -484px, -68px, 36px, 36px, 586px, 565px, '/assets/te
 $spritesheet-width: 586px;
 $spritesheet-height: 565px;
 $spritesheet-image: '/assets/template/css/sprites/sprite.png';
-$spritesheet-sprites: ($arrow-orange-down-320, $bracket-320, $bracket-750, $bracket, $computer-320, $computer-750, $computer, $facebook, $instagram, $location, $loupe-320, $loupe-750, $loupe, $peak-down-blue-small-320, $peak-down-blue, $peak-down-gray-320, $peak-down-gray-small-320, $peak-down-white-750, $peak-down-white-small, $peak-up-blue-small-320, $peak-up-gray-small, $peak-up-gray, $peak-up-ligthblue-750, $peak-up-white, $people-320, $people-750, $people, $smile-320, $smile-sad-320, $smile-sad, $smile, $twitter, $vk, $wiki, $xform-close, );
+$spritesheet-sprites: ($arrow-orange-down-320, $bracket-320, $bracket-750, $bracket, $close-gradient, $computer-320, $computer-750, $computer, $facebook, $instagram, $location, $loupe-320, $loupe-750, $loupe, $peak-down-blue-small-320, $peak-down-blue, $peak-down-gray-320, $peak-down-gray-small-320, $peak-down-white-750, $peak-down-white-small, $peak-up-blue-small-320, $peak-up-gray-small, $peak-up-gray, $peak-up-ligthblue-750, $peak-up-white, $people-320, $people-750, $people, $smile-320, $smile-sad-320, $smile-sad, $smile, $twitter, $vk, $wiki, $xform-close, );
 $spritesheet: (586px, 565px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
