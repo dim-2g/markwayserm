@@ -6,7 +6,7 @@ $bp-larger-than-mobile    : "min-width: 360px" !default;
 $bp-larger-than-phablet   : "min-width: 550px" !default;
 $bp-larger-than-tablet    : "min-width: 720px" !default;
 $bp-larger-than-desktop   : "min-width: 1140px" !default;
-$bp-larger-than-desktophd : "min-width: 1440px" !default;
+$bp-larger-than-desktophd : "min-width: 1410px" !default;
 $bp-larger-than-desktopfullhd   : "min-width: 1520px" !default;
 
 $bp-larger-than-1170 : "min-width: 1170px" !default;
@@ -31,7 +31,7 @@ $container-width-larger-than-mobile: 320px !default;
 $container-width-larger-than-phablet: 320px !default;
 $container-width-larger-than-tablet: 720px !default;
 $container-width-larger-than-desktop: 1140px !default;
-$container-width-larger-than-desktophd: 1440px !default;
+$container-width-larger-than-desktophd: 1410px !default;
 $container-width-larger-than-desktopfullhd: 1520px !default;
 $total-columns: 12 !default;
 $column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns

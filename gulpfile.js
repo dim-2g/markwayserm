@@ -99,6 +99,14 @@ gulp.task('sass:dev', function() {
         .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('sass2:dev', function() {
+    return gulp.src(path.src.sass)
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(gulp.dest(path.src.css))
+        .pipe(browserSync.reload({stream: true}));
+});
+
 // production
 gulp.task('sass:prod', ['sprite:prod'], function() {
     return gulp.src(path.src.sass)
@@ -263,6 +271,17 @@ gulp.task('develop', gulpsync.sync([
     [
         'html:dev',
         'sass:dev'
+    ],
+    'watch',
+    'webserver:dev'
+]));
+
+gulp.task('develop2', gulpsync.sync([
+    'clean',
+    'sprite:dev',
+    [
+        'html:dev',
+        'sass2:dev'
     ],
     'watch',
     'webserver:dev'
