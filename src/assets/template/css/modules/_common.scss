@@ -2713,6 +2713,11 @@ a{
       font-size: 40px;
       margin-bottom: 35px;
     }
+    @media($bp-larger-than-desktophd){
+      margin-bottom: 40px;
+      line-height: 120%;
+      font-size: 52px;
+    }
     @media($bp-larger-than-desktopfullhd){
       margin-bottom: 40px;
       line-height: 120%;
@@ -2728,6 +2733,9 @@ a{
     }
     @media($bp-larger-than-desktop){
       padding: 44px 0 36px;
+    }
+    @media($bp-larger-than-desktophd){
+      padding: 44px 0 90px;
     }
     @media($bp-larger-than-desktopfullhd){
       min-height: 650px;
@@ -2750,6 +2758,11 @@ a{
       left: -26px;
       width: 500px;
     }
+    @media($bp-larger-than-desktophd) {
+      top: 69px;
+      left: -26px;
+      width: 594px;
+    }
     @media($bp-larger-than-desktopfullhd){
       top: 73px;
       left: -13px;
@@ -2767,6 +2780,10 @@ a{
     @media($bp-larger-than-desktop){
       margin-bottom: 40px;
       padding: 0 5px 0 502px;
+    }
+    @media($bp-larger-than-desktophd){
+      margin-bottom: 72px;
+      padding: 0 25px 0 616px;
     }
     @media($bp-larger-than-desktopfullhd){
       margin-bottom: 72px;
@@ -2829,6 +2846,14 @@ a{
         line-height: 60px;
         max-width: 448px;
       }
+      @media($bp-larger-than-desktophd){
+        max-width: none;
+        padding: 0px 86px;
+        font-size: 18px;
+        width: auto;
+        height: 70px;
+        line-height: 74px;
+      }
       @media($bp-larger-than-desktopfullhd){
         max-width: none;
         padding: 0px 86px;
@@ -2873,6 +2898,11 @@ a{
         padding-left: 60px;
         font-size: 14px;
       }
+      @media($bp-larger-than-desktophd) {
+        margin-bottom: 33px;
+        padding-left: 90px;
+        font-size: 18px;
+      }
       @media($bp-larger-than-desktopfullhd) {
         margin-bottom: 33px;
         padding-left: 90px;
@@ -2889,6 +2919,11 @@ a{
         top: 50%;
         left: 4px;
         transform: translateY(-50%);
+        @media($bp-larger-than-desktophd){
+          width: 49px;
+          height: 49px;
+          top: 50%;
+        }
         @media($bp-larger-than-desktopfullhd){
           width: 49px;
           height: 49px;
@@ -2909,6 +2944,11 @@ a{
         text-align: center;
         font-family: MoolBoran;
         font-weight: $font-weight-regular;
+        @media($bp-larger-than-desktophd){
+          font-size: 87px;
+          transform: translateY(-27px);
+          left: 17px
+        }
         @media($bp-larger-than-desktopfullhd){
           font-size: 87px;
           transform: translateY(-27px);
@@ -2932,9 +2972,13 @@ a{
     @media($bp-larger-than-tablet) {
       margin-bottom: 25px;
     }
+    @media($bp-larger-than-desktophd){
+      font-size: 57px;
+    }
     @media($bp-larger-than-desktopfullhd){
       line-height: 100%;
       margin-bottom: 25px;
+      font-size: 60px;
     }
   }
   &__wrapper{
@@ -2946,6 +2990,9 @@ a{
     }
     @media($bp-larger-than-desktop) {
       background: $gray url('../images/1920/serm__bg-1170.jpg') top center no-repeat;
+    }
+    @media($bp-larger-than-desktophd) {
+      background: $gray url('../images/1920/serm__bg-1440.jpg') top center no-repeat;
     }
     @media($bp-larger-than-desktopfullhd) {
       background: $gray url('../images/1920/serm__bg.png') top center no-repeat;
@@ -2967,7 +3014,7 @@ a{
       min-height: 643px;
       background: 0 none;
     }
-    @media($bp-larger-than-desktopfullhd){
+    @media($bp-larger-than-desktophd){
       min-height: 670px;
       background: 0 none;
     }
@@ -2982,6 +3029,11 @@ a{
       font-size: 27px;
       line-height: 100%;
     }
+    @media($bp-larger-than-desktophd){
+      font-size: 36px;
+      margin-bottom: 6px;
+      line-height: 90%;
+    }
     @media($bp-larger-than-desktopfullhd){
       font-size: 36px;
       margin-bottom: 6px;
@@ -2993,6 +3045,9 @@ a{
     line-height: 120%;
     @media($bp-larger-than-desktop){
       font-size: 14px;
+    }
+    @media($bp-larger-than-desktophd){
+      font-size: 18px;
     }
     @media($bp-larger-than-desktopfullhd){
       font-size: 18px;
@@ -3015,6 +3070,11 @@ a{
         left: 8px;
         max-width: 185px;
       }
+      @media($bp-larger-than-desktophd) {
+        top: 194px;
+        left: 8px;
+        max-width: 190px;
+      }
       @media($bp-larger-than-desktopfullhd) {
         top: 199px;
         left: 0px;
@@ -3035,6 +3095,11 @@ a{
         left: 132px;
         max-width: 150px;
       }
+      @media($bp-larger-than-desktophd) {
+        top: 462px;
+        left: 170px;
+        max-width: 253px;
+      }
       @media($bp-larger-than-desktopfullhd) {
         top: 379px;
         left: 191px;
@@ -3054,6 +3119,12 @@ a{
         top: 120px;
         left: 258px;
       }
+      @media($bp-larger-than-desktophd) {
+        top: 174px;
+        left: 286px;
+        max-width: 275px;
+      }
+
       @media($bp-larger-than-desktopfullhd) {
         top: 172px;
         left: 353px;
@@ -3072,6 +3143,12 @@ a{
       @media($bp-larger-than-desktop) {
         top: 414px;
         left: 384px;
+      }
+      @media($bp-larger-than-desktophd) {
+        max-width: 270px;
+        top: 437px;
+        left: 502px;
+
       }
       @media($bp-larger-than-desktopfullhd) {
         top: 437px;
@@ -3092,6 +3169,11 @@ a{
         top: 285px;
         left: 519px;
       }
+      @media($bp-larger-than-desktophd) {
+        max-width: 250px;
+        top: 290px;
+        left: 685px;
+      }
       @media($bp-larger-than-desktopfullhd) {
         top: 290px;
         left: 769px;
@@ -3111,6 +3193,11 @@ a{
         top: 152px;
         left: 713px;
       }
+      @media($bp-larger-than-desktophd) {
+        max-width: 250px;
+        top: 152px;
+        left: 869px;
+      }
       @media($bp-larger-than-desktopfullhd) {
         top: 152px;
         left: 969px;
@@ -3129,6 +3216,11 @@ a{
       @media($bp-larger-than-desktop) {
         top: 298px;
         left: 903px;
+      }
+      @media($bp-larger-than-desktophd) {
+        top: 304px;
+        left: 1110px;
+        max-width: 300px;
       }
       @media($bp-larger-than-desktopfullhd) {
         top: 301px;
@@ -3156,6 +3248,11 @@ a{
       left: 665px;
       width: 201px;
     }
+    @media($bp-larger-than-desktophd) {
+      bottom: -96px;
+      left: 849px;
+      width: 201px;
+    }
     @media($bp-larger-than-desktopfullhd) {
       left: auto;
       bottom: -100px;
@@ -3180,6 +3277,11 @@ $issue-padding-bottom-1170: 42px;
   @media($bp-larger-than-desktop){
     padding: 54px 0 30px;
   }
+  @media($bp-larger-than-desktophd){
+    padding: 138px 0 46px;
+    min-height: 917px;
+    overflow: visible;
+  }
   @media($bp-larger-than-desktopfullhd){
     padding: 74px 0 46px;
     min-height: 917px;
@@ -3197,6 +3299,11 @@ $issue-padding-bottom-1170: 42px;
       line-height: 120%;
       margin-bottom: 38px;
       font-size: 40px;
+    }
+    @media($bp-larger-than-desktophd){
+      line-height: 120%;
+      margin-bottom: 60px;
+      font-size: 60px;
     }
     @media($bp-larger-than-desktopfullhd){
       line-height: 120%;
