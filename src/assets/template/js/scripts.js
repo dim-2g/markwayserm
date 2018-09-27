@@ -1,5 +1,5 @@
 $(function() {
-    //printWidth();
+    printWidth();
 
 
     $('.open-popup-link').magnificPopup({
@@ -83,6 +83,7 @@ $(function() {
     });
 
     initGratefulSlider();
+    setHeightHeader();
 
 });
 
@@ -133,7 +134,7 @@ initGratefulSlider  = function() {
 
 var doit;
 $(window).resize(function(){
-    //printWidth();
+    printWidth();
     clearTimeout(doit);
     doit = setTimeout(resizedw, 100);
 });
@@ -142,12 +143,64 @@ function resizedw(){
     var width = $(window).width();
 
     initGratefulSlider();
+    setHeightHeader();
 }
 
 
 $(document).scroll(function(){
-    //setFixedHeader();
+    setFixedHeader();
 });
+
+setFixedHeader = function(){
+    if ($(window).width()<768) {
+        $('body').removeClass('fixed-header');
+        return;
+    }
+    var scroll = $(window).scrollTop();
+
+    var header = $('.header__body');
+    var header_orig = $('.header');
+    var header_orig_height = header_orig.outerHeight();
+
+    var header_fly = $('.header__body.slideTop');
+    var header_fly_height = header_orig_height;
+    if (header_fly.length > 0) {
+        header_fly_height = header_fly.outerHeight();
+    }
+
+    var dot_not_fly = scroll;// + header_fly_height;
+
+    if (header_orig_height<scroll) {
+        header.addClass('slideTop');
+        setTimeout(function(){
+            $('body').addClass('fixed-header');
+        });
+    }
+    
+    if (dot_not_fly < header_orig_height) {
+        $('body').removeClass('fixed-header');
+        header.removeClass('slideTop');
+    }
+    /*if (scroll == 0) {
+        $('body').removeClass('fixed-header');
+        header.removeClass('slideTop');
+    }*/
+    console.log('header_orig_height', header_orig_height);
+    console.log('dot_not_fly', dot_not_fly);
+    console.log('scroll', scroll);
+    
+
+};
+
+setHeightHeader = function(){
+    var header = $('.header')
+    if ($(window).width()>750) {;
+        var header_height = header.outerHeight();
+        header.css({'min-height':header_height});
+    } else {
+        header.css({'min-height':'auto'});
+    }
+}
 
 printWidth = function() {
     var topline_width = parseInt($('.topline').width()) + 2;

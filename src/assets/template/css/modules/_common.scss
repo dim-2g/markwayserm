@@ -7,6 +7,24 @@ body *{
   font-family: 'Montserrat', sans-serif;
 }
 
+body{
+  .slideTop {
+    transform: translateY(-100%);
+  }
+  &.fixed-header {
+    .slideTop {
+      transform: translateY(0%);
+      position: fixed;
+      top: 0;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+    .topline{
+      padding: 15px 0;
+    }
+  }
+}
+
 .container{
   //padding: 0 15px;
 }
@@ -312,7 +330,16 @@ a{
     }
   }
 }
-
+.header{
+  &__body{
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    transform: translate(0);
+  }
+}
 .topline{
   display: flex;
   padding: 12px 0;
