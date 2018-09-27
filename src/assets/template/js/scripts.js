@@ -1,5 +1,5 @@
 $(function() {
-    printWidth();
+    //printWidth();
 
 
     $('.open-popup-link').magnificPopup({
@@ -133,7 +133,7 @@ initGratefulSlider  = function() {
 
 var doit;
 $(window).resize(function(){
-    printWidth();
+    //printWidth();
     clearTimeout(doit);
     doit = setTimeout(resizedw, 100);
 });
