@@ -1,5 +1,5 @@
 $(function() {
-    printWidth();
+    //printWidth();
 
 
     $('.open-popup-link').magnificPopup({
@@ -29,8 +29,11 @@ $(function() {
     $('body').on('click', '[data-goto]', function(e) {
         e.preventDefault();
         var selector = $(this).attr('data-goto');
-        $('.mobile-menu').slideUp();
-        $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
+        $('.mobile-menu-styled').slideUp();
+
+        //var hx = -1 * $('.header').outerHeight();
+        var hx = -77;
+        $('html, body').animate({ scrollTop: $(selector).offset().top + hx}, 1200);
     });
 
     $('[data-tab]').click(function(e){
@@ -48,7 +51,8 @@ $(function() {
 
         if ($(e.target).hasClass('xtab-nav__open')) {
             var selector = $(this).attr('data-tab');
-            $('html, body').animate({ scrollTop: $(selector).offset().top}, 400);
+            var hx = -77;
+            $('html, body').animate({ scrollTop: $(selector).offset().top + hx}, 400);
         }
 
         return false;

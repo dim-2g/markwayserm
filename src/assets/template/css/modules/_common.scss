@@ -228,7 +228,7 @@ a{
   top: 0;
   height: 100vh;
   display: none;
-  z-index: 100;
+  z-index: 700;
   width: 320px;
   &__close{
     position: absolute;
@@ -331,6 +331,8 @@ a{
   }
 }
 .header{
+  position: relative;
+  z-index: 701;
   &__body{
     background-color: #fff;
     left: 0;
@@ -4476,8 +4478,18 @@ $issue-padding-bottom-1170: 42px;
   }
 
   &__grid{
+
     &:not(.slick-initialized) > div{
       display: inline-block;
+    }
+    .slick-list{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  img{
+    &:hover{
+      box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -5188,7 +5200,7 @@ textarea.form-styled{
     font-size: 12px !important;
     line-height: 150% !important;
     margin: 0 !important;
-    @media($bp-larger-than-mobile) {
+    @media($bp-larger-than-phablet ) {
       width: 360px;
       font-size: 14px !important;
       margin: 15px !important;
@@ -5208,5 +5220,6 @@ input[type="text"].error{
     content: "\f00c";
     font-family: FontAwesome;
     font-size: 30px;
+    color: $blue;
   }
 }
