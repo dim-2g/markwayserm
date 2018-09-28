@@ -11,6 +11,8 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-contrib-copy": "^0.1.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-fontgen": "^0.2.5",
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-imagemin": "2.1.0",
     "gulp-livereload": "^3.8.1",

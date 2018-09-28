@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    rjs = require('gulp-requirejs'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     copy = require('gulp-contrib-copy'),
@@ -19,50 +20,31 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     rigger = require('gulp-rigger'),
-    plumber = require('gulp-plumber'),
-    cssmin = require('gulp-cssmin'),
-    fontgen = require('gulp-fontgen');
+    plumber = require('gulp-plumber');
 
 // Пути для сборки
 var path = {
     build: {
         root: 'public/',
         js: 'public/assets/template/js/',
-        fonts: 'public/assets/template/fonts/',
         rjs: 'build.js',
         css: 'public/assets/template/css/',
-        img: 'public/assets/template/images/',
+        img: 'public/assets/template/img/',
         sprites: 'public/assets/template/img/sprites/',
-        vendor_css: 'public/assets/template/vendor/',
-        vendor_js: 'public/assets/template/vendor/',
     },
     src: {
         root: 'src/',
-        html: 'src/assets/template/html/*.html',
+        html: 'src/assets/template/html/**/*.html',
         js: 'src/assets/template/js/**/*.js',
-        fonts: 'src/assets/template/fonts/**/*.*',
         rjs: 'src/assets/template/js/',
         scripts: 'src/assets/template/scripts/**/*.js',
         sass: 'src/assets/template/css/main.scss',
         css: 'src/assets/template/css/',
-        img: 'src/assets/template/images/**/*.*',
+        img: 'src/assets/template/img/**/*.*',
+        requirejsLib: 'src/assets/template/lib/require.js',
         lib: '../lib/',
         tpl: '../tpl/',
-        sprites: 'src/assets/template/sprites/*.*',
-        vendor_css: [
-            'src/assets/template/vendor/slick/slick.css',
-            'src/assets/template/vendor/slick/slick-theme.css',
-            'src/assets/template/vendor/magnific-popup/magnific-popup.css',
-            'src/assets/template/vendor/fancybox/jquery.fancybox.min.css'
-        ],
-        vendor_js: [
-            'src/assets/template/vendor/jquery-3.2.1.min.js',
-            'src/assets/template/vendor/slick/slick.js',
-            'src/assets/template/vendor/magnific-popup/magnific-popup.js',
-            'src/assets/template/vendor/fancybox/jquery.fancybox.min.js',
-            'src/assets/template/vendor/jquery.inputmask.bundle.js',
-            'src/assets/template/vendor/circles.min.js',
-        ]
+        sprites: 'src/assets/template/sprites/*.*'
     },
     dev: {
         sprites: 'src/assets/template/css/sprites/'
@@ -137,19 +119,51 @@ gulp.task('sass:prod', ['sprite:prod'], function() {
         .pipe(gulp.dest(path.build.css));
 });
 
-// Оптимизация изображений
-gulp.task('img', function () {
-    gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.build.img));
+// Сборка requirejs
+gulp.task('requirejs:build', function() {
+    rjs({
+        baseUrl: path.src.rjs,
+        name: 'main',
+        out: path.build.rjs,
+        paths: {
+            jquery: path.src.lib + 'jquery',
+            lodash: path.src.lib + 'lodash',
+            backbone: path.src.lib + 'backbone',
+            text: path.src.lib + 'text',
+            tpl: path.src.tpl
+        },
+        shim: {
+            lodash: {
+                exports: '_'
+            },
+            backbone: {
+                deps: [
+                    'lodash',
+                    'jquery'
+                ],
+                exports: 'Backbone'
+            }
+        },
+        map: {
+            '*': {
+                'underscore': 'lodash'
+            }
+        }
+    })
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js));
 });
 
-gulp.task('img:prod', function () {
+// Копирование библиотеки require.js для production
+gulp.task('requirejs:copy_lib', function() {
+    gulp.src(path.src.requirejsLib)
+        .pipe(copy())
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js));
+});
+
+// Оптимизация изображений
+gulp.task('img', function () {
     gulp.src(path.src.img)
         .pipe(imagemin({
             progressive: true,
@@ -168,27 +182,6 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(path.build.js));
 });
 
-gulp.task('js:prod', function() {
-    return gulp.src(path.src.js)
-        .pipe(gulp.dest(path.build.js));
-});
-
-gulp.task('vendor:js', function () {
-    return gulp.src(path.src.vendor_js)
-        .pipe(uglify())
-        .pipe(concat('combined.min.js'))
-        .pipe(gulp.dest(path.build.vendor_js));
-});
-
-
-gulp.task('vendor:css', function () {
-    return gulp.src(path.src.vendor_css)
-        .pipe(concat('combined.min.css'))
-        .pipe(cssmin())
-        .pipe(gulp.dest(path.build.vendor_css));
-});
-
-
 // Препроцессинг html
 // development
 gulp.task('html:dev', function() {
@@ -205,11 +198,6 @@ gulp.task('html:prod', function() {
         .pipe(rigger()) //Прогоним через rigger
         .pipe(preprocess({context: {NODE_ENV: 'production', DEBUG: true}}))
         .pipe(gulp.dest(path.build.root))
-});
-
-gulp.task('fonts:prod', function() {
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
 });
 
 gulp.task('sprite:dev', function () {
@@ -304,21 +292,12 @@ gulp.task('production', gulpsync.sync([
     'clean',
     [
         'html:prod',
-        'fonts:prod',
         'sass:prod',
-        'vendor:css',
-        'vendor:js',
-        'img:prod',
-        'js:prod',
-        //'scripts:prod'
+        //'requirejs:build',
+        //'requirejs:copy_lib',
+        'img',
+        'scripts'
     ],
-    //'webserver:prod'
+    'webserver:prod'
 
 ]));
-
-gulp.task('fontgen', function() {
-  return gulp.src("src/assets/template/fonts/*.{ttf,otf}")
-    .pipe(fontgen({
-      dest: "src/assets/template/fonts/"
-    }));
-});
